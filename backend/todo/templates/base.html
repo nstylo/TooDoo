@@ -29,6 +29,15 @@
         {% block footer %}
         <hr /> {% endblock %}
     </div>
+    <script type="text/javascript">
+      /* Put your context vars here. I recommend putting them under
+      a variable to avoid naming conflicts.
+       */
+      var context = {
+        username: '{{ user.username }}',
+        isAuthenticated: '{{ user.is_authenticated }}'
+      };
+    </script>
 </body>
 
 </html>
