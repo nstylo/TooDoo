@@ -30,6 +30,10 @@ if DJANGO_ENV == 'development':
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
 
+    CORS_ORIGIN_WHITELIST = [
+        'http://127.0.0.1:3000',
+        'http://localhost:3000',
+    ]
     # to run email locally: python -m smtpd -n -c DebuggingServer localhost:1025
     EMAIL_HOST = 'localhost'
     EMAIL_PORT = '1025'
@@ -70,8 +74,6 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-]
 
 CORS_ALLOW_CREDENTIALS = True
 
