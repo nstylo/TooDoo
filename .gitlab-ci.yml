@@ -56,6 +56,7 @@ staging:
   cache: {}
   only:
     - master
+    - master_backup
   environment:
     name: staging
     url: $URL_STAGING
